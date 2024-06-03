@@ -6,12 +6,27 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styling.css" />
 		<title>Basic Moves</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var searchBar = document.getElementById("searchBar");
+				searchBar.onclick = function (e) {
+					searchBar.addEventListener("keydown", function (e) {
+						if (e.code === "Enter") {
+							window.find(e.target.value);
+						}
+					})
+				}
+			};
+		</script>
 	</head>
 
 	<body>
+		<div class="topnav">
+			<input type="text" id="searchBar" placeholder="Search..." function="search()">
+		</div>
 		<h1>Basic Moves</h1>
 		<div class="section">
-			<h2>Act Under Fire</h2>
+			<h2 id="actUnderFire">Act Under Fire</h2>
 			<p>
 				When you do something under fire, or dig in to endure, roll+Sturdy. On a 10+, you do it. On a 7-9, you flinch,
 				hesitate, or stall. The DM can offer you a worse outcome, a hard bargain, or an ugly choice.
