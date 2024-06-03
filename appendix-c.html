@@ -6,9 +6,24 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="styling.css" />
 		<title>Appendix C</title>
+		<script type="text/javascript">
+			window.onload = function () {
+				var searchBar = document.getElementById("searchBar");
+				searchBar.onclick = function (e) {
+					searchBar.addEventListener("keydown", function (e) {
+						if (e.code === "Enter") {
+							window.find(e.target.value);
+						}
+					})
+				}
+			};
+		</script>
 	</head>
 
 	<body>
+		<div class="topnav">
+			<input type="text" id="searchBar" placeholder="Search..." function="search()">
+		</div>
 		<h1>Appendix C: Abilities</h1>
 		<div class="section">
 			<h2>Fighting</h2>
