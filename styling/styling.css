@@ -26,7 +26,7 @@ tr:nth-child(odd) {
 }
 
 /* garish colors for testing */
-p {
+/* p {
 	background-color: red;
 }
 
@@ -36,17 +36,16 @@ h1, h2, h3 {
 
 ul {
 	background-color: green;
-}
+} */
 
 .section {
 	margin: 20px 0;
-
-	background-color: blue;
+	/* background-color: blue; */
 }
 
 .section p {
 	margin: 5px 0px 0px 0px;
-	background-color: pink;
+	/* background-color: pink; */
 }
 
 .important {
