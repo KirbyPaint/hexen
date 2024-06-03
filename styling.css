@@ -1,0 +1,48 @@
+/* * {
+	border: 1px solid black;
+} */
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+/* table styling tbd */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+	background-color: #f2f2f2;
+}
+
+.section {
+	margin: 20px 0;
+}
+
+.important {
+	font-weight: bold;
+}
+
+.superImportant {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.example {
+	font-style: italic;
+	background-color: #f2f2f2;
+	border: 2px solid #c2c2c2;
+	border-radius: 10px;
+	margin: 1rem;
+	padding: 1rem;
+}

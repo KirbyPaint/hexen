@@ -1,42 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mechanics</title>
-</head>
-<body>
-	<h1>Mechanics</h1>
-	<h2>Out of Combat</h2>
-	<p>You will go about playing the RPG as normal, declaring your actions and having the DM respond. If there is a decision
-	point where a roll matters, or when the player wishes to, perform a Move. These Moves have specific names and specific
-	outcomes. Moves always have 2d6+stat, and always follow this chart:
-	
-	2-6 - Fail. Sometimes you get partially what you want, but at a great cost. Prepare for the worst.
-	7-9 - Partial success. You succeed, but it is not as much as you want to succeed or there are hidden complications.
-	10+ Success. You get what you want. Good job.</p>
 
-	<h2>Pressure</h2>
-	<p>
-		When exploring dangerous areas the Pressure deck comes into play. The deck consists of 21 cards, 18 number cards and 3
-		face cards. Shuffle them all together.
-		
-		Every move into an unknown location, searching for loot, or other situations that take time the party must make a
-		pressure roll. A player chooses a stat. Then roll+stat.
-		
-		2-6 - Flip over two cards.
-		7-9 - Flip over one card.
-		10+ - Flip over zero cards
-		
-		If a face card is drawn something bad happens. After that's been resolved the pressure deck is recreated with 14 cards,
-		12 number cards and 2 face cards. Repeat the process and build again with 7 cards, 6 number cards and 1 face card. After
-		that repeat the 7 card setup while replacing 1 number card with 1 face card.
-		
-		When the party goes into downtime the pressure deck is reset.
-	</p>
-	<h2>Downtime</h2>
-	<p>When the party is in a safe place to rest they can enter Downtime. This is the equivalent of both
-	resting/sleeping/working on something in your spare time. Usually about 4-8 hours. During Downtime you gain points to
-	spend on Downtime moves. Much like normal moves there is a basic list, and additional moves you can from other sources.</p>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styling.css">
+		<title>Mechanics</title>
+	</head>
+
+	<body>
+		<h1>Mechanics</h1>
+		<div class="section">
+			<h2>Out of Combat</h2>
+			<p>
+				You will go about playing the RPG as normal, declaring your actions and having the DM respond. If there is a
+				decision point where a roll matters, or when the player wishes to, perform a Move. These Moves have specific
+				names
+				and specific outcomes. Moves always have <span class="important">2d6+stat</span>, and always follow this chart:
+			<ul>
+				<li>
+					2-6 - Fail. Sometimes you get partially what you want, but at a great cost. Prepare for the worst.
+				</li>
+				<li>
+					7-9 - Partial success. You succeed, but it is not as much as you want to succeed or there are hidden
+					complications.
+				</li>
+				<li>10+ Success. You get what you want. Good job.</li>
+			</ul>
+			</p>
+		</div>
+
+		<div class="section">
+			<h2>Pressure</h2>
+			<p>
+				When exploring dangerous areas the Pressure deck comes into play. The deck consists of 21 cards, 18 number cards
+				and 3 face cards. Shuffle them all together.
+			</p>
+			<p>
+				Every move into an unknown location, searching for loot, or other situations that take time the party must make
+				a
+				pressure roll. A player chooses a stat. Then <span class="important">roll+stat</span>.
+			</p>
+			<ul>
+				<li>2-6 - Flip over two cards.</li>
+				<li>7-9 - Flip over one card.</li>
+				<li>10+ - Flip over zero cards</li>
+			</ul>
+			<p>
+				If a face card is drawn <span class="important">something bad happens</span>. After that's been resolved the
+				pressure deck is recreated with 14 cards, 12 number cards and 2 face cards. Repeat the process and build again
+				with 7 cards, 6 number cards and 1 face card. After that repeat the 7 card setup while replacing 1 number card
+				with 1 face card.
+			</p>
+			<p>When the party goes into downtime the pressure deck is reset.</p>
+		</div>
+
+		<div class="section">
+			<h2>Downtime</h2>
+			<p>
+				When the party is in a safe place to rest they can enter <span class="important">Downtime</span>. This is the
+				equivalent of resting/sleeping/working on something in your spare time. Usually about 4-8 hours. During Downtime
+				you gain points to spend on Downtime moves. Much like normal moves there is a basic list, and additional moves
+				you
+				can learn from other sources.
+			</p>
+		</div>
+
+		<div class="section">
+			<h2>Combat</h2>
+			<p>When people want other people dead we enter combat.</p>
+			<p>
+				Before Combat starts everyone will need to make a <span class="important">Fear Roll</span>. This roll determines
+				how much Mind damage you will take. The DM will declare the horror of the monster (none to Terror) and
+				characters
+				will <span class="important">roll+Sturdy</span>. Depending on your roll and the horror of the monster you will
+				suffer Mind damage.</p>
+			<table>
+				<tr>
+					<th>Roll</th>
+					<th>10+</th>
+					<th>7-9</th>
+					<th>6-</th>
+				</tr>
+				<tr>
+					<td>None</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Scary</td>
+					<td>0</td>
+					<td>2</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Fear</td>
+					<td>2</td>
+					<td>5</td>
+					<td>10</td>
+				</tr>
+				<tr>
+					<td>Terror</td>
+					<td>5</td>
+					<td>10</td>
+					<td>20</td>
+				</tr>
+			</table>
+			<p>
+				During combat the only die you will be using is the Death Die, also known as a d20.
+			</p>
+		</div>
+
+		<div class="section">
+			<h2>Initiative</h2>
+			<p>
+				To determine initiative all participants in combat roll a d20. From highest to lowest record if the number
+				rolled
+				is
+				a player or monster. Players win ties. If a combat with 3 players and 2 enemies it might looks something like
+				this:
+				P, M, P, P, M
+			</p>
+			<p>
+				Starting with the first in turn order that initiative slot can be used by anyone on the side it represents. For
+				example, if that initiative slot is a player's then <span class="important">any</span> player can take their
+				turn.
+				Once their turn is complete, then they can no longer act in combat. If the initiative slot is an enemy the same
+				applies. If the character wishes they can move their initiative slot to later in the turn order. At the end of
+				the
+				round everyone still fighting rolls again to determine a new initiative order.
+			</p>
+			<p>
+			<div class="example">
+				<p>Example: The Knight and Mercenary are confronted by two guards. These men have been corrupted by dark magic
+					as
+					they are 1 ½ times the size of an average man. From their guttural calls for blood and killing this can only
+					end
+					with a fight. Everyone rolls for initiative. The Knight rolls a 15, the Mercenary rolls 10, the first Guard
+					rolls
+					a 12, and the second Guard rolls a 4. The turn order is:</p>
+				<p>Player, Enemy, Player, Enemy.</p>
+				<p>
+					"I'll go first," says the Mercenary, "with your stunning mace you can stun the enemy who didn't attack, or try
+					to
+					kill the guard I attack if I deal enough damage."
+				</p>
+				<p>"Sounds good." replies the Knight. The Mercenary takes the first turn in the initiative and attacks Guard no.
+					1.
+				</p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Face Cards</h2>
+			<p>
+				When using a face card in the initiative order there are bonus effects for both the players and enemies.
+			<ul>
+				Players:
+				<li>
+					Hearts/Diamonds J,Q,K - +1 to your next roll.
+				</li>
+				<li>
+					Hearts Ace - Take another action at the end of the round. It cannot be the same action you have used this
+					turn.
+				</li>
+				<li>
+					Diamond Ace - Gain an equal about of Rev Tokens spent this turn.
+				</li>
+			</ul>
+			<ul>
+				Enemies:
+				<li>
+					Any face card - Trigger a special ability.
+				</li>
+			</ul>
+			</p>
+		</div>
+
+		<div class="section">
+			<h2>Moving</h2>
+			<p>
+				The map drawn will be divided into zones. If you are in a zone with a monster or player then you can interact
+				with
+				them. Each turn you can move 1 zone and still take an action. You can action then move or move then action. You
+				can move an additional zone as your action allowing you to move 2 zones in a turn.
+			</p>
+		</div>
+
+		<div class="section">
+			<h2>Melee Attacks</h2>
+			<p>
+				When you wish to attack, determine where you are and where the enemy is. If you are in the same zone then you
+				can
+				make a melee attack. If you wish to attack in a different zone the attack you are using will need to have the
+				Ranged tag.
+			</p>
+			<p>
+				Next choose your target. Every attack you make is an aimed shot, the only difference is if you attack the head
+				you
+				will lower the intensity of your attack by one. Tactical choices are important as disabling an important limb or
+				destroying their body might lead to a quick victory.
+			</p>
+			<p>
+				Next determine the length of each weapon being used (unarmed, short, medium, long). Whoever had the longer
+				range<span class="superImportant">may</span> choose to <span class="important">first strike</span>. First strike
+				lets you attack first using the next initiative slot in order. If you inflict major damage to the attacker with
+				a
+				first strike the following attack will have -1 intensity.
+			</p>
+			<p>
+				Attack: Roll Death Dice (d20). Take that number rolled and add or subtract any bonuses (+1, -2, etc) then
+				increase
+				or decrease the intensity of the attack as needed. Always add/subtract bonuses first, and then increase/decrease
+				intensity. Finally check to see how much damage you have done.
+			</p>
+			<ul>
+				Death Dice Results:
+				<li>1-5: Miss.</li>
+				<li>6-10: Minor damage.</li>
+				<li>11-15 Major damage.</li>
+				<li>16-19 Critical damage.</li>
+				<li>20 Kill. <span class="superImportant">The same applies to the enemies.</span></li>
+			</ul>
+			<p>
+				A 20 can always be lowered in intensity, but a 1 is always a miss.
+			</p>
+			<div class="example">
+				<p>
+					Example: The Outlander charges at the enemy Yellow Mage, Two-Handed Ax in hand. The Yellow Mage is wielding a
+					sacrificial dagger with range short, so the Yellow Mage cannot first strike against the Outlander's Long
+					ranged
+					ax. The Outlander is targeting the Yellow Mage's right arm to disrupt whatever spellcasting he is planning on
+					doing. The Outlander rolls the d20. 10! A minor wound. The Outlander has the ability Melee Proficiency
+					increasing their roll by +1. 11! A major wound. The Two-Handed Ax has the Deadly tag increasing the intensity
+					of
+					the attack by 1. The major wound turns into a Critical Wound.
+				</p>
+				<p>
+					The Outlander chops into the enemy Yellow Mage dealing massive damage. The
+					Yellow Mage screams in pain as his right arm is cut off completely. The
+					Yellow Mage is just barely still alive and is preparing an attack with his
+					dagger for his next action. With the initiative order the heroes are up
+					next.
+				</p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Ranged Attacks</h2>
+			<p>
+				When making a ranged attack you need an attack with the Ranged tag and for there to be an enemy one space away.
+				<span class="superImportant">You cannot make a ranged attack if you have been attacked in melee range during
+					this
+					round</span>. If all of these conditions are met, fire away. Use the same attack rules as a melee attack minus
+				the first strike section.
+			</p>
+			<div class="example">
+				<p>Example: The Outland and Mercenary are trying to get the drop off some guards but they
+					were noticed. The first guard moves into the zone with the two characters and attacks the Outland with his
+					meat
+					cleaver. Next it's the players turn. "I want to move back a zone and fire my bow at the guard who attacked
+					me,"
+					the Outlander declared.
+				<p>
+					"Sorry, you can move but because the guard attacked you with his melee weapon you cannot make a ranged attack
+					this round. You can still move back if you want."
+				</p>
+				<p>
+					"I will attack him with my ax and then move back a zone. Mercenary, can you guard me until the next round?"
+				</p>
+				</p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Armor/Block</h2>
+			<p>
+				When a player or monster is attacked they can use one charge of their armor to negate that damage. Armor covers
+				the whole body unless otherwise stated, so armor can be used on any damage roll. Armor does not repair itself on
+				its own, so it is a limited resource.
+			</p>
+			<p>
+				Physical Block can block physical attacks.
+			</p>
+			<p>
+				Magic Block can block magical attacks.
+			</p>
+
+			<div class="example">
+				<p>
+					Example: The Mercenary is being flanked by two guards. One guard attacks dealing minor damage to his body, the
+					next guard is up and brings his cleaver down onto him with great force. 19!
+				</p>
+				<p>
+					"Shit," says the mercenary player. If he does nothing this attack will critically wound him. "Good thing I'm
+					wearing Leather Armor!" This isn't the first time they used their armor, so they mark their armor block from 1
+					out of 2 to 0 out of 2. "Still not in a good spot, but at least I'm not going to immediately die. Hey Knight,
+					want to help me out?"
+				</p>
+			</div>
+		</div>
+
+		<div class="section">
+			<h2>Guarding</h2>
+			<p>
+				If you wish on your turn you can guard, sacrificing your turn. While
+				guarding if someone is attacked while in your zone you can take the attack
+				instead. You must declare you are guarding the attack before dice are
+				rolled. Certain items and skills help lower the damage taken from guarded
+				hits, but by default you take full damage. You can only defend against one
+				enemy attack when guarding.
+			</p>
+			<div class="example">
+				<p>
+					Example: The Knight realizes that the Mercenary is wounded and out of block. Luckily the Mercenary killed one
+					of
+					the Monsters so it is 2 on 1.
+				</p>
+				<p>
+					"While I know the enemy is wounded I don't want to risk anything." The Knight looks towards the Mercenary,
+					"Stand next to me and I'll be your shield."
+				</p>
+				<p>
+					The knight guards on her turn. As the monster attacks the Knight steps in the way. 11! Major damage.
+				</p>
+				<p>
+					"With my kite shield Defensive tag I lower the intensity of the attack by 1.
+				</p>
+				<p>
+					The major damage turns into minor damage as the Knight deflects the monster's cleaver to the side.
+				</p>
+			</div>
+			<p>
+				Rev Tokens - In battle each player character start
+				with 1 Rev Token. These tokens represent your willpower to not die. You
+				can use a Rev Token anytime to:
+			</p>
+			<ul>
+				<li>
+					Reroll your dice
+				</li>
+				<li>
+					Reroll the enemy dice
+				</li>
+				<li>
+					Use them for some spell costs.
+				</li>
+			</ul>
+			<p>
+				When you take critical damage for the first
+				time in combat you gain 1 Rev Token.
+			</p>
+			<div class="example">
+				<p>
+					Example: The Dark Priest is wanting to throw a poison dart at a Lord of Flies. Getting the poison to spread
+					through the large beast's body early will swing the fight in their favor. They throw the dart. 3!
+				</p>
+				<p>
+					"Drat." The Dark Priest thinks to themselves, "I want to use a Rev Token to reroll this, but at the same time
+					I need it to absorb the Mind cost of my Hurting spell."
+				</p>
+				<p>
+					"Just reroll it." The Outlander says, "Hurting is only 30 Mind. The poison will really help us."
+				</p>
+				<p>
+					The Dark Priest sighs, "Fine. I'm using my Rev Token to reroll my dice."
+				</p>
+			</div>
+			<p>
+				<span class="important">Other Combat Rules:</span>
+			</p>
+			<p>
+				<span class="important">Spill Over</span> - If you hit a location that is critical roll the d6 again and
+				increase intensity by 1.
+			</p>
+			<p>
+				<span class="important">Headshots</span> - You can do a headshot with either ranged or melee attacks. Reduce
+				intensity of the attack by 1
+				unless your attack has the Precise tag.
+			</p>
+		</div>
+	</body>
+
 </html>
