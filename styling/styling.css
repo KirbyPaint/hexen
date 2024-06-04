@@ -48,6 +48,14 @@ ul {
 	/* background-color: pink; */
 }
 
+.section a:link {
+	color: black;
+}
+
+.section a:visited {
+	color: black;
+}
+
 .important {
 	font-weight: bold;
 }
