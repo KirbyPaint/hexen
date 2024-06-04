@@ -104,12 +104,11 @@ ul {
 	height: 2.5rem;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* Desktop-specific styling */
 @media screen and (min-width: 600px) {
 	.oldGodsTable {
 		margin: 0;
 		max-width: 100%;
-		table-layout: fixed;
 	}
 
 	.oldGodsTable th {
@@ -149,6 +148,7 @@ ul {
 	}
 }
 
+/* Mobile-specific styling */
 @media screen and (max-width: 600px) {
 	.topnav {
 		display: flex;
