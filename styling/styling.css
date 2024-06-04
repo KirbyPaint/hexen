@@ -8,8 +8,10 @@ body {
 
 /* table styling tbd */
 table {
+	border: 1px solid black;
 	border-collapse: collapse;
 	width: 100%;
+	margin: 10px;
 }
 
 th, td {
@@ -23,6 +25,22 @@ th {
 
 tr:nth-child(odd) {
 	background-color: #f2f2f2;
+}
+
+ul {
+	list-style-type: square;
+	margin: 0;
+	/* padding: 0; */
+	overflow: hidden;
+}
+
+.combatTable {
+	max-width: 50%;
+}
+
+.combatTable td {
+	word-wrap: break-word;
+	max-width: 150px;
 }
 
 /* garish colors for testing */
@@ -86,8 +104,42 @@ ul {
 	height: 2.5rem;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+/* Desktop-specific styling */
 @media screen and (min-width: 600px) {
+	.oldGodsTable {
+		margin: 0;
+		max-width: 100%;
+	}
+
+	.oldGodsTable th {
+		background-color: #c2c2c2;
+	}
+
+	.oldGodsTable tr {
+		border: 2px solid gray;
+		border-collapse: collapse;
+	}
+
+	.oldGodsTable td {
+		word-wrap: break-word;
+		max-width: 150px;
+	}
+
+	.fixedWidthGod {
+		width: 100px;
+	}
+
+	.fixedWidthSpell {
+		width: 150px;
+	}
+
+	.fixedWidthReqs {
+		width: 250px;
+	}
+
+	.fixedWidthCost {
+		width: 220px;
+	}
 	.topnav {
 		display: none;
 	}
@@ -96,6 +148,7 @@ ul {
 	}
 }
 
+/* Mobile-specific styling */
 @media screen and (max-width: 600px) {
 	.topnav {
 		display: flex;
